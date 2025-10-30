@@ -1,4 +1,4 @@
-import userModal from '../module/userModal'
+import {addUser} from '../module/user.model.js'
 
 export const createUser = async (req, res) => {
     const { name, email } = req.body;
