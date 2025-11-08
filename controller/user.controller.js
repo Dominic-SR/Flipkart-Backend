@@ -1,6 +1,10 @@
 import {addUser} from '../module/user.model.js';
 import bcrypt from "bcrypt"
 
+  import { fileURLToPath } from "url"
+  import { dirname, join } from "path"
+  
+
 export const createUser = async (req, res) => {
     const { user_name, user_email, user_password, user_phoneno, user_picture } = req.body;
     if (!user_name || !user_email || !user_password) {
