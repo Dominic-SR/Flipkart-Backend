@@ -9,7 +9,8 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    await queryInterface.createTable('user_table', {
+
+      await queryInterface.createTable('user_table',{
       user_id:{
         allowNull:false,
         autoIncrement:true,
@@ -40,6 +41,11 @@ module.exports = {
         allowNull:false,
         type:Sequelize.BOOLEAN,
         defaultValue:true
+      },
+      user_picture:{
+        allowNull:true,
+        type:Sequelize.STRING,
+        defaultValue:null
       },
       created_at:{
         allowNull:false,
