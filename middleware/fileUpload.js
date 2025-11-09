@@ -46,4 +46,6 @@ const upload = multer({
 })
 
 // export the middleware function
-export const uploadFile = upload.single('uploadfile') 
+export const uploadSingleFile = (fieldName) => {
+    return upload.single(fieldName) 
+}
