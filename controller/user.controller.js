@@ -25,7 +25,7 @@ export const createUser = async (req, res) => {
         } else if (error.sqlMessage.includes('user_email')) {
             field = 'Email';
         }
-        return res.status(409).json({ 
+        return res.status(401).json({ 
             message: `${field} already exists. Please choose a different one.` 
         });
     }
